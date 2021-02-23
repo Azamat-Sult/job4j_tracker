@@ -30,4 +30,20 @@ public class PointTest {
         double rsl = a.distance(b);
         assertThat(rsl, closeTo(0, 0.001));
     }
+
+    @Test
+    public void distanceWhenX1Y1Z1toX2Y2Z2Then1dot732() {
+        Point a = new Point(1, 1,1);
+        Point b = new Point(2, 2,2);
+        double rsl = a.distance3d(b);
+        assertThat(rsl, closeTo(1.732, 0.001));
+    }
+
+    @Test
+    public void distanceWhenX1Y2Z3toX4Y5Z6Then5dot196() {
+        Point a = new Point(1, 2,3);
+        Point b = new Point(4, 5,6);
+        double rsl = a.distance3d(b);
+        assertThat(rsl, closeTo(5.196, 0.001));
+    }
 }
