@@ -7,4 +7,8 @@ public class Diagnosis {
     public void setMedicine(String medicine) {
         this.medicine = medicine;
     }
+
+    public String getMedicine() {
+        return this.medicine;
+    }
 }

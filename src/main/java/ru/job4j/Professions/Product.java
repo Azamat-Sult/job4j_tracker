@@ -8,4 +8,7 @@ public class Product {
         this.lifetime = lifetime;
     }
 
+    public String getLifetime() {
+        return this.lifetime;
+    }
 }
