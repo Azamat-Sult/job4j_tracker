@@ -7,7 +7,8 @@ public class Doctor extends Profession {
     public Doctor() {
     }
 
-    public Doctor(boolean doctoralDegree) {
+    public Doctor(String name, String surname, String education, String birthday, boolean doctoralDegree) {
+        super(name, surname, education, birthday);
         this.doctoralDegree = doctoralDegree;
     }
 

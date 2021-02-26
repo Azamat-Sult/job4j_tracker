@@ -7,7 +7,8 @@ public class Programmer extends Engineer {
     public Programmer() {
     }
 
-    public Programmer(boolean gameDeveloper) {
+    public Programmer(String name, String surname, String education, String birthday, boolean qualificationImprovement, boolean gameDeveloper) {
+        super(name, surname, education, birthday, qualificationImprovement);
         this.gameDeveloper = gameDeveloper;
     }
 

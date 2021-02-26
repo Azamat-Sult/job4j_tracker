@@ -7,7 +7,8 @@ public class Engineer extends Profession {
     public Engineer() {
     }
 
-    public Engineer(boolean qualificationImprovement) {
+    public Engineer(String name, String surname, String education, String birthday, boolean qualificationImprovement) {
+        super(name, surname, education, birthday);
         this.qualificationImprovement = qualificationImprovement;
     }
 
