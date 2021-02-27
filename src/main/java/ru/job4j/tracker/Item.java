@@ -46,10 +46,12 @@ public class Item {
         return created;
     }
 
-    public static void main(String[] args) {
-        Item item1 = new Item();
-        Item item2 = new Item(123);
-        Item item3 = new Item("Hello");
-        Item item4 = new Item(123,"Hello");
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", created=" + created +
+                '}';
     }
 }
