@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 
 public class TrackerTest {
     @Test
-    public void whenAddNewItemThenTrackerHasSameItem1() {
+    public void whenFindById() {
         Tracker tracker = new Tracker();
         Item item = new Item();
         item.setName("test1");
@@ -16,13 +16,26 @@ public class TrackerTest {
     }
 
     @Test
-    public void whenAddNewItemThenTrackerHasSameItem2() {
+    public void whenFindByName() {
         Tracker tracker = new Tracker();
-        Item item = new Item();
-        item.setName("test2");
-        tracker.add(item);
-        Item result = tracker.findByName(item.getName());
-        assertThat(result.getName(), is(item.getName()));
+        Item[] expect = new Item[2];
+
+        Item item1 = new Item();
+        item1.setName("test1");
+        tracker.add(item1);
+        expect[0] = item1;
+
+        Item item2 = new Item();
+        item2.setName("test1");
+        tracker.add(item2);
+        expect[1] = item2;
+
+        Item item3 = new Item();
+        item3.setName("test2");
+        tracker.add(item3);
+
+        Item[] result = tracker.findByName("test1");
+        assertThat(result, is(expect));
     }
 
     @Test
