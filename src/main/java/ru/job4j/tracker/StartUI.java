@@ -20,8 +20,7 @@ public class StartUI {
                 System.out.println("==== Show all items ====");
                 Item[] allItems = tracker.findAll();
                 for (int index = 0; index < allItems.length; index++) {
-                    System.out.println("ID: " + allItems[index].getId()
-                            + ", Task name: " + allItems[index].getName());
+                    System.out.println(allItems[index]);
                 }
             } else if (select == 2) {
                 System.out.println("==== Edit item ====");
@@ -59,8 +58,7 @@ public class StartUI {
                 Item[] foundByName = tracker.findByName(targetName);
                 if (foundByName.length != 0) {
                     for (int index = 0; index < foundByName.length; index++) {
-                        System.out.println("ID: " + foundByName[index].getId()
-                                + ", Task name: " + foundByName[index].getName());
+                        System.out.println(foundByName[index]);
                     }
                 } else System.out.println("A tasks with this name was not found");
             } else if (select == 6) {
