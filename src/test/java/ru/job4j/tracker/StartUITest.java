@@ -113,10 +113,11 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item 1", "1"}
         );
-        Item[] expected = new Item[] {new Item("Item 1"), new Item("Item 1")};
+        Item item1 = new Item("Item 1");
+        Item item2 = new Item("Item 1");
         Tracker tracker = new Tracker();
-        tracker.add(expected[0]);
-        tracker.add(expected[1]);
+        tracker.add(item1);
+        tracker.add(item2);
         UserAction[] actions = {
                 new FindByNameAction(output),
                 new ExitAction()
@@ -125,8 +126,8 @@ public class StartUITest {
         assertThat(output.toString(), is("Menu:" + ln +
                 "0. Find items by name" + ln +
                 "1. Exit Program" + ln +
-                "Item{id=1, name='Item 1', created=" + tracker.findByName(expected[0].getName())[0].getCurrentDateTime()+ "}" + ln +
-                "Item{id=2, name='Item 1', created=" + tracker.findByName(expected[1].getName())[0].getCurrentDateTime()+ "}" + ln +
+                "Item{id=1, name='Item 1', created=" + item1.getCurrentDateTime()+ "}" + ln +
+                "Item{id=2, name='Item 1', created=" + item2.getCurrentDateTime()+ "}" + ln +
                 "Menu:" + ln +
                 "0. Find items by name" + ln +
                 "1. Exit Program" + ln
