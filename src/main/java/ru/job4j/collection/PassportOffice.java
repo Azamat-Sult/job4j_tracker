@@ -18,8 +18,4 @@ public class PassportOffice {
     public Citizen get(String passport) {
         return citizens.get(passport);
     }
-
-    public int getNumOfCitizens() {
-        return citizens.size();
-    }
 }
