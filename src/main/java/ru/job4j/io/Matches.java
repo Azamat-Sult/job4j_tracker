@@ -17,7 +17,8 @@ public class Matches {
                 count -= matches;
                 System.out.println("Осталось " + count + " спичек");
             } else {
-                System.out.println("Введенное число вне диапазона 1..3 или спичек осталось меньше чем введенное число");
+                System.out.print("Введенное число вне диапазона 1..3 ");
+                System.out.println("или спичек осталось меньше чем введенное число");
             }
         }
         if (!turn) {

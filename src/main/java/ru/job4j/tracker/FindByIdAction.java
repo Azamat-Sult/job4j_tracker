@@ -18,7 +18,9 @@ public class FindByIdAction implements UserAction {
         Item foundItem = tracker.findById(inputID);
         if (foundItem != null) {
             out.println(foundItem);
-        } else out.println("A task with this ID was not found");
+        } else {
+            out.println("A task with this ID was not found");
+        }
         return true;
     }
 }

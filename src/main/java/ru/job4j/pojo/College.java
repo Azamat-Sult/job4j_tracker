@@ -9,6 +9,7 @@ public class College {
         student.setGroup("ESiS-313");
         student.setDateOfEntrance(new Date());
 
-        System.out.println("Student " + student.getFullName() + " studying in a group " + student.getGroup() + " since " + student.getDateOfEntrance());
+        System.out.print("Student " + student.getFullName() + " studying in a group ");
+        System.out.println(student.getGroup() + " since " + student.getDateOfEntrance());
     }
 }

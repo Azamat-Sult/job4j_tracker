@@ -27,7 +27,7 @@ public class NotifyAccountTest {
     }
 
     @Test
-    public void DuplicateDeletingSent() {
+    public void duplicateDeletingSent() {
         List<Account> accounts = Arrays.asList(
                 new Account("123", "Petr Arsentev", "eDer3432f"),
                 new Account("123", "Petr Arsentev", "eDer3432f"),

@@ -20,7 +20,9 @@ public class FindByNameAction implements UserAction {
             for (int index = 0; index < foundByName.length; index++) {
                 out.println(foundByName[index]);
             }
-        } else out.println("A tasks with this name was not found");
+        } else {
+            out.println("A tasks with this name was not found");
+        }
         return true;
     }
 }

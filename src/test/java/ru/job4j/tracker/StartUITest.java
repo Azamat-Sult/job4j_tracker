@@ -40,14 +40,14 @@ public class StartUITest {
                 new ExitAction()
         };
         new StartUI(output).init(in, tracker, actions);
-        assertThat(output.toString(), is("Menu:" + ln +
-                "0. Show all items" + ln +
-                "1. Exit Program" + ln +
-                item1.toString() + ln +
-                item2.toString() + ln +
-                "Menu:" + ln +
-                "0. Show all items" + ln +
-                "1. Exit Program" + ln
+        assertThat(output.toString(), is("Menu:" + ln
+                + "0. Show all items" + ln
+                + "1. Exit Program" + ln
+                + item1.toString() + ln
+                + item2.toString() + ln
+                + "Menu:" + ln
+                + "0. Show all items" + ln
+                + "1. Exit Program" + ln
         ));
     }
 
@@ -101,13 +101,13 @@ public class StartUITest {
                 new ExitAction()
         };
         new StartUI(output).init(in, tracker, actions);
-        assertThat(output.toString(), is("Menu:" + ln +
-                "0. Find item by Id" + ln +
-                "1. Exit Program" + ln +
-                itemToFind.toString() + ln +
-                "Menu:" + ln +
-                "0. Find item by Id" + ln +
-                "1. Exit Program" + ln
+        assertThat(output.toString(), is("Menu:" + ln
+                + "0. Find item by Id" + ln
+                + "1. Exit Program" + ln
+                + itemToFind.toString() + ln
+                + "Menu:" + ln
+                + "0. Find item by Id" + ln
+                + "1. Exit Program" + ln
         ));
     }
 
@@ -129,14 +129,14 @@ public class StartUITest {
                 new ExitAction()
         };
         new StartUI(output).init(in, tracker, actions);
-        assertThat(output.toString(), is("Menu:" + ln +
-                "0. Find items by name" + ln +
-                "1. Exit Program" + ln +
-                item1.toString() + ln +
-                item2.toString() + ln +
-                "Menu:" + ln +
-                "0. Find items by name" + ln +
-                "1. Exit Program" + ln
+        assertThat(output.toString(), is("Menu:" + ln
+                + "0. Find items by name" + ln
+                + "1. Exit Program" + ln
+                + item1.toString() + ln
+                + item2.toString() + ln
+                + "Menu:" + ln
+                + "0. Find items by name" + ln
+                + "1. Exit Program" + ln
         ));
     }
 
@@ -153,8 +153,8 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu:" + ln +
-                        "0. Exit Program" + ln
+                "Menu:" + ln
+                        + "0. Exit Program" + ln
         ));
     }
 
@@ -163,7 +163,7 @@ public class StartUITest {
         String ln = System.lineSeparator();
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] { "10", "0" }
+                new String[] {"10", "0"}
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
