@@ -12,7 +12,9 @@ public class FreezeStr {
         for (int index = 0; index < left.length(); index++) {
             if (!leftHashMap.containsKey(left.charAt(index))) {
                 leftHashMap.put(left.charAt(index), 1);
-            } else leftHashMap.put(left.charAt(index), leftHashMap.get(left.charAt(index)) + 1);
+            } else {
+                leftHashMap.put(left.charAt(index), leftHashMap.get(left.charAt(index)) + 1);
+            }
         }
         for (int index = 0; index < right.length(); index++) {
             if (!leftHashMap.containsKey(right.charAt(index))) {
