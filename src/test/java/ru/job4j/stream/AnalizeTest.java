@@ -12,13 +12,13 @@ public class AnalizeTest {
 
     @Test
     public void diff() {
-        Analize.User user1 = new Analize.User(1,"A");
-        Analize.User user2 = new Analize.User(2,"B");
-        Analize.User user3 = new Analize.User(3,"C");
-        Analize.User user4 = new Analize.User(4,"D");
-        Analize.User user5 = new Analize.User(5,"E");
-        Analize.User user6 = new Analize.User(4,"DE");
-        Analize.User user7 = new Analize.User(6,"F");
+        Analize.User user1 = new Analize.User(1, "A");
+        Analize.User user2 = new Analize.User(2, "B");
+        Analize.User user3 = new Analize.User(3, "C");
+        Analize.User user4 = new Analize.User(4, "D");
+        Analize.User user5 = new Analize.User(5, "E");
+        Analize.User user6 = new Analize.User(4, "DE");
+        Analize.User user7 = new Analize.User(6, "F");
         List<Analize.User> before = new ArrayList<>();
         before.add(user1);
         before.add(user2);
@@ -30,7 +30,7 @@ public class AnalizeTest {
         after.add(user6);
         after.add(user5);
         after.add(user7);
-        Analize.Info expect = new Analize.Info(2,1,1);
+        Analize.Info expect = new Analize.Info(2, 1, 1);
         Analize anlz = new Analize();
         assertThat(expect, is(anlz.diff(before, after)));
     }

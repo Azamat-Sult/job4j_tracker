@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Analize {
     public Info diff(List<User> previous, List<User> current) {
-        Info info = new Info(0,0,0);
+        Info info = new Info(0, 0, 0);
         info.added = (int) current
                 .stream()
                 .dropWhile(previous::contains)
@@ -23,8 +23,8 @@ public class Analize {
     }
 
     public static class User {
-        int id;
-        String name;
+        private int id;
+        private String name;
 
         public User(int id, String name) {
             this.id = id;
@@ -41,8 +41,12 @@ public class Analize {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof User)) return false;
+            if (this == o) {
+                return true;
+            }
+            if (!(o instanceof User)) {
+                return false;
+            }
 
             User user = (User) o;
 
@@ -56,9 +60,9 @@ public class Analize {
     }
 
     public static class Info {
-        int added;
-        int changed;
-        int deleted;
+        private int added;
+        private int changed;
+        private int deleted;
 
         public Info(int added, int changed, int deleted) {
             this.added = added;
@@ -68,8 +72,12 @@ public class Analize {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             Info info = (Info) o;
             return added == info.added && changed == info.changed && deleted == info.deleted;
         }
