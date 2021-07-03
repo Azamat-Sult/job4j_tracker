@@ -11,7 +11,7 @@ public class ReverseString {
 
     public static void main(String[] args) {
         ReverseString sample = new ReverseString();
-        char[] arg = new char[] {'h','e','l','l','o'};
+        char[] arg = new char[] {'h', 'e', 'l', 'l', 'o'};
         sample.reverseString(arg);
         for (char el : arg) {
             System.out.println(el);
