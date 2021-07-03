@@ -1,4 +1,4 @@
-package ru.job4j.SQLTracker;
+package ru.job4j.sqltracker;
 
 public class StubInput implements Input {
     private String[] answers;

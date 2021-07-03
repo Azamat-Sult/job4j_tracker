@@ -1,4 +1,4 @@
-package ru.job4j.SQLTracker;
+package ru.job4j.sqltracker;
 
 public class StubOutput implements Output {
     private final StringBuilder buffer = new StringBuilder();

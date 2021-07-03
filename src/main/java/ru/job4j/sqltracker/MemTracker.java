@@ -1,4 +1,4 @@
-package ru.job4j.SQLTracker;
+package ru.job4j.sqltracker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class MemTracker implements Store {
     }
 
     public List<Item> findByName(String key) {
-        List<Item> rsl= new ArrayList<>();
+        List<Item> rsl = new ArrayList<>();
         for (Item item : items) {
             if (item.getName().equals(key)) {
                 rsl.add(item);

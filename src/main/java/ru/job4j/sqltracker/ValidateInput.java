@@ -1,4 +1,4 @@
-package ru.job4j.SQLTracker;
+package ru.job4j.sqltracker;
 
 public class ValidateInput implements Input {
     private final Output out;

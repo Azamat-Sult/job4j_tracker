@@ -1,4 +1,4 @@
-package ru.job4j.SQLTracker;
+package ru.job4j.sqltracker;
 
 public class DeleteAction implements UserAction {
     private final Output out;
